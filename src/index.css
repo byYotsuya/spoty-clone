@@ -1,0 +1,70 @@
+@font-face {
+  font-family: 'Circular';
+  src: url(../assets/CircularBook.otf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Circular';
+  src: url(../assets/CircularBold.otf);
+  font-weight: 700;
+}
+
+:root {
+  --glue-font-weight-normal: 400;
+  --glue-font-weight-bold: 700;
+  --glue-font-weight-black: 900;
+  --nav-bar-width: 232px;
+  --background-noise: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJhIiB4PSIwIiB5PSIwIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iLjc1IiBzdGl0Y2hUaWxlcz0ic3RpdGNoIi8+PGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIvPjwvZmlsdGVyPjxwYXRoIGZpbHRlcj0idXJsKCNhKSIgb3BhY2l0eT0iLjA1IiBkPSJNMCAwaDMwMHYzMDBIMHoiLz48L3N2Zz4=);
+  --buddy-feed-width: 270px;
+  --min-column-width: 270px;
+  --column-gap: 24px;
+  --row-gap: 12px;
+  --item-height: 64px;
+
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.rc-slider {
+  width: 100px !important;
+}
+
+
+.rc-slider-track, .rc-slider-handle {
+  background-color: #b3b3b3 !important;
+  border: none !important;
+}
+.rc-slider-handle {
+  width: 9px !important;
+  height: 9px !important;
+  margin-top: -3px !important;
+}
+
+body {
+  margin: 0;
+  font-family: 'Circular', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+a {
+  color: #fff;
+}

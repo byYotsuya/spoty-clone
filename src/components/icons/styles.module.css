@@ -1,0 +1,26 @@
+.created {
+  align-items: center;
+  background: #fff;
+  border-radius: 1px;
+  color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 1px;
+}
+
+.liked {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(135deg, #450af5, #c4efd9);
+  border-radius: 1px;
+  justify-content: center;
+  padding: 5px;
+  fill: #fff;
+}

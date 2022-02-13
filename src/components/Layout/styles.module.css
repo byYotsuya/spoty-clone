@@ -1,0 +1,27 @@
+.main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(230, 145, 255);
+  background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,.6)),to(#121212)),var(--background-noise);
+  background-image: linear-gradient(rgba(0,0,0,.6) 0,#121212 100%),var(--background-noise);
+  -webkit-transition: background 1s ease;
+  transition: background 1s ease;
+  z-index: -1;
+}
+
+.sidebar {
+  flex: 0.24;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: calc(100vh - 75px);
+  padding: 0 30px;
+  flex: 0.8;
+  position: relative;
+  right: 0;
+}
