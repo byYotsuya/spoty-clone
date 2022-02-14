@@ -120,6 +120,7 @@
   color: #b3b3b3;
   height: 30px;
   cursor: pointer;
+  display: block;
 }
 
 .item:hover {

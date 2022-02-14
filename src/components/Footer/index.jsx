@@ -1,42 +1,49 @@
 import React from 'react'
+import SpotifyWebApi from 'spotify-web-api-js'
 import Marquee from 'react-fast-marquee'
+import { useRecoilValue } from 'recoil'
+import { PlayCircle, SkipStart, SkipEnd, Shuffle, Repeat, QueueMusic, DevicesOther, Volume, Microphone } from '../icons'
 
-import { FaPlayCircle } from 'react-icons/fa'
-import { BsFillSkipStartFill, BsSkipEndFill } from 'react-icons/bs'
-import { BiShuffle, BiRepeat } from 'react-icons/bi'
-
-import { GiMicrophone } from 'react-icons/gi'
-import { MdOutlineQueueMusic, MdDevicesOther } from 'react-icons/md'
-import { CgVolume } from 'react-icons/cg'
-
-import Slider, { Range } from 'rc-slider'
+import Slider from 'rc-slider'
 import 'rc-slider/assets/index.css'
 
 import styles from './styles.module.css'
+import { currentTrackState } from '../../recoil/atoms'
+
+const s = new SpotifyWebApi()
 export default function Footer () {
+  const { name, image, artists, id, isPlaying } = useRecoilValue(currentTrackState)
+  const track = useRecoilValue(currentTrackState)
+
+  console.log(track)
+
   return (
     <div className={styles.footer}>
       <div className={styles.footer__left}>
-        <img src='https://i.scdn.co/image/ab67616d0000485149caa4fc6f962057ba65576a' />
+        <img src={image} />
         <div>
           <Marquee gradientColor='none' speed={15}>
-            <h4>Het??</h4>
+            <h4>
+              {name}
+            </h4>
           </Marquee>
-          <p>gola</p>
+          <p>
+            {artists?.map(artist => artist.name).join(', ')}
+          </p>
         </div>
       </div>
       <div className={styles.footer__center}>
-        <BiShuffle />
-        <BsFillSkipStartFill />
-        <FaPlayCircle size={30} />
-        <BsSkipEndFill />
-        <BiRepeat />
+        <Shuffle />
+        <SkipStart />
+        <PlayCircle size={30} />
+        <SkipEnd />
+        <Repeat />
       </div>
       <div className={styles.footer__right}>
-        <GiMicrophone />
-        <MdOutlineQueueMusic />
-        <MdDevicesOther />
-        <CgVolume />
+        <Microphone />
+        <QueueMusic />
+        <DevicesOther />
+        <Volume />
         <Slider />
       </div>
     </div>

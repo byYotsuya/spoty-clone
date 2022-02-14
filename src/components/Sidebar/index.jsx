@@ -1,18 +1,20 @@
 import React from 'react'
 import { useRecoilValue } from 'recoil'
 import { playlistsState } from '../../recoil/atoms'
+import { Home, Search, Library } from '../icons'
 import Created from '../icons/Created'
-import Home from '../icons/Home'
-import Library from '../icons/Library'
 import Liked from '../icons/Liked'
 import Logo from '../icons/Logo'
-import Search from '../icons/Search'
 import CustomLink from './CustomLink'
 import SidebarItem from './SidebarItem'
 import styles from './styles.module.css'
 
 export default function Sidebar () {
   const playlists = useRecoilValue(playlistsState)
+
+  const color = {
+    color: '#b3b3b3', size: 22
+  }
 
   return (
     <nav className={styles.wrapper}>
@@ -21,9 +23,9 @@ export default function Sidebar () {
       </div>
 
       <div>
-        <CustomLink icon={<Home />} title='Home' to='/' />
-        <CustomLink icon={<Search />} title='Search' to='/search' />
-        <CustomLink icon={<Library />} title='Your Library' to='/playlist' />
+        <CustomLink icon={<Home {...color} />} title='Home' to='/' />
+        <CustomLink icon={<Search {...color} />} title='Search' to='/search' />
+        <CustomLink icon={<Library {...color} />} title='Your Library' to='/playlists' />
 
       </div>
 
@@ -45,7 +47,7 @@ export default function Sidebar () {
 
       <div style={{ marginTop: '30px' }}>
         {playlists?.items?.map((playlist, index) => (
-          <SidebarItem key={index} title={playlist.name} />
+          <SidebarItem key={index} title={playlist.name} id={playlist.id} />
         ))}
 
         {/* <SidebarItem title='Rock' />

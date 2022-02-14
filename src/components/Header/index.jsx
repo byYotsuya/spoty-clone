@@ -1,9 +1,8 @@
 import React from 'react'
 
-import { ImUser } from 'react-icons/im'
-import { IoMdSearch } from 'react-icons/io'
 import { useRecoilValue } from 'recoil'
 import { userState } from '../../recoil/atoms'
+import { Search, User } from '../icons'
 
 import styles from './styles.module.css'
 
@@ -13,8 +12,7 @@ export default function Header () {
   return (
     <div className={styles.header}>
       <div className={styles.header__left}>
-        <IoMdSearch size={30} />
-
+        <Search size={22} />
         <input type='text' placeholder='Search for Artists, Songs, Playlists' />
       </div>
 
@@ -25,7 +23,7 @@ export default function Header () {
             {
               (user?.images[0])
                 ? <img className={styles.user__image} src={user.images[0].url} alt={user.display_name} />
-                : <ImUser />
+                : <User />
           }
           </div>
         </figure>
