@@ -1,5 +1,5 @@
 import { selector } from 'recoil'
-import { playlistsState, tokenState } from './atoms'
+import { currentTrackState, playlistsState, tokenState } from './atoms'
 
 export const getToken = selector({
   key: 'getToken', // unique ID (with respect to other atoms/selectors)
@@ -14,5 +14,13 @@ export const getPlaylists = selector({
   get: ({ get }) => {
     const playlists = get(playlistsState)
     return playlists
+  }
+})
+
+export const getCurrentTrack = selector({
+  key: 'getCurrentTrack', // unique ID (with respect to other atoms/selectors)
+  get: ({ get }) => {
+    const currentTrack = get(currentTrackState)
+    return currentTrack
   }
 })
