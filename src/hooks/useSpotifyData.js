@@ -8,11 +8,8 @@ const spotify = new SpotifyWebApi()
 
 const useSpotifyData = () => {
   const [token, setToken] = useRecoilState(tokenState)
-  // eslint-disable-next-line no-unused-vars
   const [user, setUser] = useRecoilState(userState)
-  // eslint-disable-next-line no-unused-vars
   const [playlists, setPlaylists] = useRecoilState(playlistsState)
-  // eslint-disable-next-line no-unused-vars
   const [currentTrack, setCurrentTrack] = useRecoilState(currentTrackState)
 
   const [isToken, setIsToken] = useState(false)
