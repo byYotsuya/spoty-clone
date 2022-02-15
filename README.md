@@ -1,8 +1,8 @@
 <div align="center">
 
-  ### TikTok Clone
+  ### Spotify Clone
   
-  ***TikTok Clone for educational purposes***
+  ***Spotify Clone for educational purposes***
 </div>
 
 <div align="center">
@@ -32,7 +32,7 @@
 
 ## About The Project
 
-TikTok clone is a educational proyect which tries to reproduce the famous TikTok app with React
+Spotify clone is a educational proyect which tries to reproduce the famous Spotify app with React
 
 ## Getting Started
 
@@ -94,5 +94,5 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ## Contact 📭
 
-**Miguel Ángel Martínez @byYotsuya**
+**Miguel Ángel Martínez**
 [@byYotsuya](https://twitter.com/msolork)
