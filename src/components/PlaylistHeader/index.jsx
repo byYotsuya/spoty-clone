@@ -21,8 +21,6 @@ export default function PlaylistHeader ({ id }) {
     }
   }, [id])
 
-  console.log('playlist', playlist)
-
   return (
     <div className={styles.body__header}>
       {playlist && (

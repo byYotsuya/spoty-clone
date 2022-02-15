@@ -12,16 +12,18 @@
 }
 
 .sidebar {
-  flex: 0.18;
+  flex: 0.25;
+  background-color: #000000;
+
 }
 
 .content {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: calc(100vh - 75px);
   padding: 0 30px;
   flex: 0.8;
-  position: relative;
   right: 0;
+  padding-bottom: 40px;
+  min-height: 100vh;
 }

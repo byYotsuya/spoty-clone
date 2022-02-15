@@ -10,12 +10,9 @@ import 'rc-slider/assets/index.css'
 import styles from './styles.module.css'
 import { currentTrackState } from '../../recoil/atoms'
 
-const s = new SpotifyWebApi()
 export default function Footer () {
   const { name, image, artists, id, isPlaying } = useRecoilValue(currentTrackState)
-  const track = useRecoilValue(currentTrackState)
-
-  console.log(track)
+  // const track = useRecoilValue(currentTrackState)
 
   return (
     <div className={styles.footer}>
