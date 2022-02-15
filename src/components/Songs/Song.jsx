@@ -4,8 +4,6 @@ import { milisegundosAMinutosYSegundos } from '../durationFormat'
 import styles from './styles.module.css'
 
 export default function Song ({ index, name, artists, album, duration, addedAt }) {
-  const time = ((duration % (1000 * 60 * 60)) / (1000 * 60)) / 1.1
-
   return (
     <div className={styles.song}>
       <p>{index}</p>

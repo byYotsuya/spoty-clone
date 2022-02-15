@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 import React from 'react'
 import usePlaylist from '../../hooks/usePlaylist'
 import { Time } from '../icons'
@@ -30,7 +31,6 @@ export default function Songs ({ id }) {
               album={track.album}
               duration={track.duration_ms}
               addedAt={added_at}
-
             />
           ))
         }
